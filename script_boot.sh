@@ -16,4 +16,15 @@ cd $HOME
 # Another way to return to the Home directory
 cd $PATH
 # This one usually fails because $PATH isn't a single directory
-
+ls -lai
+# Shows all files in a list with their info and index numbers
+man ls
+# Opens the manual for the 'ls' command
+ls -a
+# Shows everything, including hidden files
+cd ..
+# Goes up one level to the parent folder
+.
+# This represents the folder you are in right now
+..
+# This represents the folder right above this one
