@@ -53,3 +53,9 @@ ls /etc | head -20
 # Shows only the first 20 items in the /etc folder
 ls /etc | tail -20
 # Shows only the last 20 items in the /etc folder
+# TENGO MAC :)
+git clone --depth 1 https://github.com/torvalds/linux.git
+cd linux
+# Enters the folder with the Linux kernel source code
+make menuconfig
+# Opens a menu in the terminal to set up kernel options
