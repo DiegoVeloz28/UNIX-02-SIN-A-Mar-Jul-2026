@@ -49,3 +49,7 @@ whoami
 # Shows the username of the person logged in
 ls -lt
 # Lists files and sorts them by the time they were changed
+ls /etc | head -20
+# Shows only the first 20 items in the /etc folder
+ls /etc | tail -20
+# Shows only the last 20 items in the /etc folder
