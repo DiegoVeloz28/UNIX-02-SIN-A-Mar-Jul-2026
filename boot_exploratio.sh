@@ -34,3 +34,5 @@ sudo echo "hola" > /ect/archivo_protegido
 #The system attempts to open the file with your normal user permissions.
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 # Write text to a system-protected file using sudo and the tee command
+echo "hola" | sudo tee /etc/archivo_protegido
+# Write text to a system-protected file and display the output in the terminal
