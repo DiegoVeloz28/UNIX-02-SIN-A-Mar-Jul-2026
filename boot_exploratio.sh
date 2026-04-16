@@ -13,3 +13,10 @@ mkdir -- -rf
 rmdir -- -rf
 # Remove the empty directory named "-rf"
 ls --help
+# Display the built-in help manual for the 'ls' command
+man ls
+# Open the full manual page for the 'ls' command to see all options
+git clone
+# Copy a remote repository from GitHub to your local machine
+man git-clone
+# Open the manual page for the git-clone command to see usage details
