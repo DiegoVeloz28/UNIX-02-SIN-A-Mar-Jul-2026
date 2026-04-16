@@ -19,4 +19,18 @@ man ls
 git clone
 # Copy a remote repository from GitHub to your local machine
 man git-clone
-# Open the manual page for the git-clone command to see usage details
+# Open the manual page for the git-clone command to see usage detail
+chmod +x script.sh
+# Grant execute permission to everyone for the file 'script.sh'
+chmod u+x script.sh
+# Grant execute permission only to the owner (user) of the file
+chmod o-r secreto.txt
+# Remove read permission from 'others' for the file 'secreto.txt'
+chmod u+rw,go-rwx privado
+# Give the owner read/write access and revoke all permissions from everyone else
+sudo chmod +x init
+# Use administrative privileges to grant execute permission to the 'init' file
+sudo echo "hola" > /ect/archivo_protegido
+#The system attempts to open the file with your normal user permissions.
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+# Write text to a system-protected file using sudo and the tee command
