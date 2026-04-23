@@ -36,3 +36,11 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 # Write text to a system-protected file using sudo and the tee command
 echo "hola" | sudo tee /etc/archivo_protegido
 # Write text to a system-protected file and display the output in the terminal
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+# Append text to a protected system file using a subshell with root privileges
+sudo -i
+# Log in as the root user with a full interactive shell and its environment
+sudo su
+# Switch to the superuser (root) account while keeping the current user's environment
+sudo su -
+# Switch to the root account and load its specific profile and environment variables
