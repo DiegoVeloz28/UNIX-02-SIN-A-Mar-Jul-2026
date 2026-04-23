@@ -44,3 +44,13 @@ sudo su
 # Switch to the superuser (root) account while keeping the current user's environment
 sudo su -
 # Switch to the root account and load its specific profile and environment variables
+echo '#!/bin/sh' > hola.sh
+# Create a new script file with the shell interpreter path
+echo 'echo "Hola desde mi primer script"' >> hola.sh
+# Append a message command to the script file
+chmod +x hola.sh
+# Grant execute permission to the script
+cat hola.sh
+# Show the script's content to verify it was written correctly
+./hola.sh
+# Execute the script from the current directory
