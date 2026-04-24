@@ -1,0 +1,27 @@
+    1  git fetch upstream
+    2  git checkout -b eval_p2_1_g1 upstream/eval_p2_1_g1
+    3  git checkout -b eval_p2_1_g2 upstream/eval_p2_1_g2
+    4  git push origin eval_p2_1_g2
+    5  sudo apt-get update
+    6  sudo apt-get install git-lfs
+    7  git push origin eval_p2_1_g2
+    8  cd kepler
+    9  ls -F
+   10  bash filesystem_script.sh
+   11  cd evaluation
+   12  mv docs registros
+   13  cd kepler
+   14  mv docs registros
+   15  mkdir plantillas
+   16  cd ..
+   17  git add .
+   18  git commit -m "Fix problema 1: estructura de directorios corregida"
+   19  cd evaluation
+   20  mv kepler/sensores.log kepler/registros/ && mv kepler/ajustes.old kepler/ajustes.conf
+   21  git add . && git commit -m "Fix problema 2: archivos movidos y renombrados"
+   22  chmod 600 kepler/registros/sensores.log
+   23  git add . && git commit -m "Fix problema 3: permisos numericos 600 en sensores.log"
+   24  chmod u+x kepler/runner.sh
+   25  chmod o-w kepler/ajustes.conf
+   26  git add . && git commit -m "Fix problema 4: permisos simbolicos corregidos"
+   27  history > kepler/historial_comandos.txt
