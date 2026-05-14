@@ -105,3 +105,7 @@ grep -E "developers|operations|web_services" /etc/group
 # Search for multiple group names simultaneously using an extended regular expression
 grep "GID_MIN\|GID_MAX\|SYS_GID" /etc/login.defs
 # Search for the ID range limits for users and system groups in the login configuration file
+sudo groupadd temporary_group
+# Create a new system group named "temporary_group" using administrative privileges
+sudo usermod -aG temporary_group root
+# Add the root user to the "temporary_group" without removing it from its existing groups
