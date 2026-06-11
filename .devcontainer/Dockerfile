@@ -181,6 +181,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
+# Update repositories, install text editors, developer utilities, manual pages, network tools, security suites, generate Spanish locale, and clean up installation cache files to reduce image size
 
 # ----------------------------------------------------------------------------
 # SHELL: qué intérprete usar en los siguientes RUN
