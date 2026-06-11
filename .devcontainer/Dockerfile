@@ -24,6 +24,7 @@
 # en su versión "rolling" (actualización continua, siempre al día).
 # Todo lo que instalemos más abajo se apila ENCIMA de esta base.
 FROM kalilinux/kali-rolling:latest
+# Set the official Kali Linux rolling release as the base image for the container
 
 
 # ----------------------------------------------------------------------------
@@ -63,7 +64,6 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # debconf-set-selections para que no detenga el build esperando input.
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
-
 
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
@@ -189,8 +189,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
 SHELL ["/bin/bash", "-c"]
-
-
 # ----------------------------------------------------------------------------
 # WORKDIR: directorio de trabajo al entrar al contenedor
 # ----------------------------------------------------------------------------
@@ -210,6 +208,7 @@ RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
  && git lfs install --system
+
 
 # ----------------------------------------------------------------------------
 # CMD: comando que se ejecuta por defecto al arrancar el contenedor
@@ -233,10 +232,8 @@ __set_prompt() {
 }
 PROMPT_COMMAND=__set_prompt
 EOF
+
 CMD ["/bin/zsh"]
 
-
-# Configuración permanente de ZSH en el Dockerfile
 RUN echo 'visto_o_x() { echo "%(?..%F{red}✘%f )%(?.%F{green}✔%f )"; }' >> /root/.zshrc && \
     echo "PROMPT='\$(visto_o_x)%F{cyan}%n%f@%F{yellow}%m%f:%F{blue}%~%f$ '" >> /root/.zshrc
-
