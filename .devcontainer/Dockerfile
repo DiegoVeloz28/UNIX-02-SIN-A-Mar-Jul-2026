@@ -198,6 +198,7 @@ SHELL ["/bin/bash", "-c"]
 # /workspaces/<nombre-del-repo>. Establecer /workspaces aquí hace que las
 # terminales se abran cerca de nuestros archivos del curso.
 WORKDIR /workspaces
+# Set the default absolute path for the workspace directory where project repositories will be mounted
 
 # Configuración de Git para el contenedor:
 # - safe.directory *: confía en cualquier repo montado (necesario porque
@@ -210,7 +211,7 @@ RUN git config --system --add safe.directory '*' \
  && git config --system init.defaultBranch main \
  && git config --system pull.rebase false \
  && git lfs install --system
-
+# Configure system-wide Git policies for trusted directories, default branches, merge behavior, and initialize Large File Storage
 
 # ----------------------------------------------------------------------------
 # CMD: comando que se ejecuta por defecto al arrancar el contenedor
