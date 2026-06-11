@@ -53,7 +53,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     LANG=es_ES.UTF-8 \
     LC_ALL=es_ES.UTF-8 \
     TERM=xterm-256color
-
+# Configure global environment variables for automated installations, Spanish language support, and 256-color terminal mode
 
 # ----------------------------------------------------------------------------
 # Pre-respuesta a una pregunta interactiva de Wireshark
