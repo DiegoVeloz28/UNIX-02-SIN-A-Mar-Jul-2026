@@ -64,7 +64,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
 # debconf-set-selections para que no detenga el build esperando input.
 RUN echo "wireshark-common wireshark-common/install-setuid boolean false" \
     | debconf-set-selections
-
+# Pre-seed the configuration database to disable interactive prompts during Wireshark package installation
 # ----------------------------------------------------------------------------
 # RUN: ejecutar comandos durante la construcción de la imagen
 # ----------------------------------------------------------------------------
