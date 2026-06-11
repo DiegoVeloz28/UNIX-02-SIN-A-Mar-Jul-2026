@@ -190,6 +190,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # cambiamos a bash por si agregamos más instrucciones con sintaxis
 # moderna (arrays, [[ ]], etc.).
 SHELL ["/bin/bash", "-c"]
+# Set the Bash interpreter as the default execution shell for the subsequent container build layers
 # ----------------------------------------------------------------------------
 # WORKDIR: directorio de trabajo al entrar al contenedor
 # ----------------------------------------------------------------------------
