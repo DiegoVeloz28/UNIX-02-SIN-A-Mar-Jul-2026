@@ -235,8 +235,11 @@ __set_prompt() {
 }
 PROMPT_COMMAND=__set_prompt
 EOF
+# Append a custom prompt function to the Bash configuration file to display the user 'Diego_Veloz' along with dynamic exit status markers
 
 CMD ["/bin/zsh"]
+# Define Zsh as the default interactive shell executable to run when the container starts up
 
 RUN echo 'visto_o_x() { echo "%(?..%F{red}✘%f )%(?.%F{green}✔%f )"; }' >> /root/.zshrc && \
     echo "PROMPT='\$(visto_o_x)%F{cyan}%n%f@%F{yellow}%m%f:%F{blue}%~%f$ '" >> /root/.zshrc
+# Inject a custom terminal prompt configuration into the Zsh runcom file to handle real-time execution success or failure icons
