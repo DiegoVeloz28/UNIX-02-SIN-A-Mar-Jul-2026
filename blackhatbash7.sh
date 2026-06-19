@@ -15,3 +15,14 @@ awk '{print $2}' log.txt
 awk '{print $3}' log.txt
 
 awk '{print $1,$NF}' log.txt
+sed 's/Mozilla/Godzilla/g' log.txt
+grep "zilla" log.txt
+sed 's/Mozilla/Godzilla/g' log.txt > newlog.txt
+grep "zilla" log.txt
+sed -i '1d' newlog.txt
+grep "157.48.153.185" newlog.txt
+grep "157.48.153.185" log.txt
+git diff newlog.txt
+git diff log.txt
+sed -i '1d' log.txt
+sed -i '1d' newlog.txt
